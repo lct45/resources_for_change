@@ -14,137 +14,174 @@ body {
   margin: 0;
 }
 
-
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #cceeff;
+.header {
+    overflow: hidden;
+    padding: 30px;
+    background: #cceeff;
+    color: black;
 }
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: left;
-  padding: 14px 20px;
+.header h1{
+    position: absolute;
+    left: 43%;
+    margin-left: -43px;
+    top: 7%;
+    margin-top: -7px;
+
+
+}
+
+.header a{
+    display: inline;
+    text-align: right;
+    position: absolute;
+    left: 94%;
+    margin-left: -94;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding-top: 15px;
+
+
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-}
-
-.navbar a.right {
-  float: right; /* Float a link to the right */
-}
-
-.navbar a.center {
-  text-align: center
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #0066cc;
+  font-size: 25px;
   color: black;
+  display: block;
+  transition: 0.3s;
 }
 
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
+.sidebar a:hover {
+  color: #0e7cbb;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-/* Main column */
-.main {   
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #cceeff;
+  color: #0e7cbb;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #0e7cbb;
+}
+
+#main {
   flex: 70%;
   background-color: white;
-  padding: 20px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 20px;
+  background-color: #cceeff;
+  overflow: hidden;
+
+
 }
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+#main h2{
+    text-align: center;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
+#main h5{
+    text-align: center;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
+#main h6{
+    font-size: 20px;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
+#main h7{
+    font-size: 20px;
+    text-align: right;
+}
+
+.padding{
+
+    padding: 100px;
+
+}
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width:100%;
-  }
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 </style>
 </head>
 <body>
+    <div class="header">
+        <button class="openbtn" onclick="openNav()">☰</button>  
+        <h1>Resources for Change</h1>
+        <a href="#">about</a>
+      </div>
 
-<div class="navbar">
-  <a href="#">Educate</a>
-  <a href="#">Take</a>
-  <a href="#">Donate</a>
-  <a href="#">Black Businesses</a>
-  <a href="#">Bookstores</a>
-  <a href="#">Accounts</a>
-  <a href="#">Resources</a>
-  <a href="#" class="right">submit</a>
-  <a href="#" class="right">about</a>
-  <a href="#" class="center">Resources for Change</a>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Educate Yourself</a>
+        <a href="#">Take Action</a>
+        <a href="#">Donate</a>
+        <a href="#">Support Black Businesses</a>
+        <a href="#">Black-Owned Bookstores</a>
+        <a href="#">Accounts to Follow</a>
+        <a href="#">Additional Resources</a>
+        <a href="#">Submit</a>
 
+      </div>
+      
+      <div id="main">
+        <h2>Welcome to Resources for Change</h2>
+        <h5>we're glad you're here</h5>
+        <h6>we created this project to help curate resources regarding what we can all do during this time, as so many great things have been shared on a wide variety of platforms. In this document, you can find resources on how to educate ourselves, take action, donate, support black businesses, and resources others have created. The most important part of this page is that THE WORK IS NOT DONE. We are relying on you all to share this with folks and ADD TO THIS LIST. You can find a tab on the link to submit resources and content that you have been seeing and consuming recently that you feel is valuable to share with others. This project only lives on with YOUR INPUT!</h6>
+        <br>
+        <img src="practice.jpg" class="padding" alt="for fun" width="300" height="300" style="float:right">
+        <br>
+        <img src="practice.jpg"  alt="for fun" width="300" height="300" style="float:left">
+        <br>
+        <h7>check out reading materials</h7>
+        </div>
+      </div>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("header").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("header").style.marginLeft= "0";
+      }
+      </script>
 
-  
-</div>
-
-<div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
-
-<div class="footer">
-  <h2>Footer</h2>
-</div>
 
 </body>
 </html>
