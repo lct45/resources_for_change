@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Educate Yourself</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, serif;
+  margin: 0;
+}
+
+.header {
+    overflow: hidden;
+    padding: 30px;
+    background: #cceeff;
+    color: black;
+}
+
+.header h1{
+    position: absolute;
+    left: 43%;
+    margin-left: -43px;
+    top: 7%;
+    margin-top: -7px;
+
+
+}
+
+.header a{
+    display: inline;
+    text-align: right;
+    position: absolute;
+    left: 94%;
+    margin-left: -94;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding-top: 15px;
+
+
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #0e7cbb;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #cceeff;
+  color: #0e7cbb;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #0e7cbb;
+}
+#main {
+  flex: 70%;
+  background-color: white;
+  
+  padding-top: 20px;
+  overflow: hidden;
+
+
+}
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <button class="openbtn" onclick="openNav()">☰</button>  
+        <h1>Resources for Change</h1>
+        <a href="#">about</a>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="educate_yourself.html">Educate Yourself</a>
+        <a href="take_action.html">Take Action</a>
+        <a href="donate.html">Donate</a>
+        <a href="support_businesses.html">Support Black Businesses</a>
+        <a href="black_bookstores.html">Black-Owned Bookstores</a>
+        <a href="accounts.html">Accounts to Follow</a>
+        <a href="more_resources.html">Additional Resources</a>
+        <a href="#">Submit</a>
+
+    </div>
+    <div id="main">
+
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrGqI3NhoFPwcAWJ?backgroundColor=cyanLight&viewControls=on" frameborder="0" onmousewheel="" width="70%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>    
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("header").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("header").style.marginLeft= "0";
+        }
+        </script>
+</body>
+</html>
