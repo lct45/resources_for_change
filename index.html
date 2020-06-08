@@ -96,10 +96,8 @@ body {
 #main {
   flex: 70%;
   background-color: white;
-  padding-left: 300px;
-  padding-right: 300px;
+  
   padding-top: 20px;
-  background-color: #cceeff;
   overflow: hidden;
 
 
@@ -113,10 +111,10 @@ body {
     text-align: center;
 }
 
-#main h6{
+.column h6{
     font-size: 20px;
-    text-align: center;
-    padding-right: 100px;
+    text-align: right;
+    padding-right: 50px;
     padding-left: 100px;
 }
 
@@ -127,9 +125,33 @@ body {
 
 .padding{
 
-    padding: 100px;
+    padding: 10px;
 
 }
+
+.main_image {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.image_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
@@ -160,11 +182,22 @@ body {
       <div id="main">
         <h2>Welcome to Resources for Change</h2>
         <h5>we're glad you're here</h5>
-        <h6>we created this project to help curate resources regarding what we can all do during this time, as so many great things have been shared on a wide variety of platforms. In this document, you can find resources on how to educate ourselves, take action, donate, support black businesses, and resources others have created. The most important part of this page is that THE WORK IS NOT DONE. We are relying on you all to share this with folks and ADD TO THIS LIST. You can find a tab on the link to submit resources and content that you have been seeing and consuming recently that you feel is valuable to share with others. This project only lives on with YOUR INPUT!</h6>
+        <div class="main_image">
+
+            <img src="wallpaper.jpg" alt="for fun" width="100%" >
+            <div class="image_text">learn. grow. discover.</div>
+          </div>
+        <div class="row">
+            <div class="column">
+                <h6>we created this project to help curate resources regarding what we can all do during this time, as so many great things have been shared on a wide variety of platforms. In this document, you can find resources on how to educate ourselves, take action, donate, support black businesses, and resources others have created. The most important part of this page is that THE WORK IS NOT DONE. We are relying on you all to share this with folks and ADD TO THIS LIST. You can find a tab on the link to submit resources and content that you have been seeing and consuming recently that you feel is valuable to share with others. This project only lives on with YOUR INPUT!</h6>
+                <img src="practice.jpg"  alt="for fun" width="300" height="300" style="float:left">
+            </div>
+            <div class="column">
+                <img src="practice.jpg" alt="for fun" width="400" height="300" style="padding-top:54px; padding-left:50px">
+            </div>
+        </div>
         <br>
-        <img src="practice.jpg" class="padding" alt="for fun" width="300" height="300" style="float:right">
         <br>
-        <img src="practice.jpg"  alt="for fun" width="300" height="300" style="float:left">
         <br>
         <h7>check out reading materials</h7>
         </div>
