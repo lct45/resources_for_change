@@ -9,8 +9,23 @@
   box-sizing: border-box;
 }
 
+@font-face {
+   font-family: Shrikhand;
+   src: url(Shrikhand-Regular.ttf);
+}
+
+@font-face {
+   font-family: GlacialIndifference;
+   src: url(GlacialIndifference-Regular.otf);
+}
+@font-face {
+   font-family: GlacialIndifference;
+   src: url(GlacialIndifference-Bold.otf);
+   font-weight: bold;
+}
+
 body {
-  font-family: Garamond, serif;
+    font-family: GlacialIndifference, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -21,12 +36,14 @@ body {
     color: black;
 }
 
-.header h1{
+.header a.center{
+    font-family: Shrikhand, Garamond, serif;
     position: absolute;
-    left: 43%;
-    margin-left: -43px;
-    top: 7%;
-    margin-top: -7px;
+    left: 37%;
+    margin-left: -37px;
+    top: 3%;
+    margin-top: -3px;
+    font-size: 40px;
 
 
 }
@@ -95,7 +112,8 @@ body {
 #main {
   flex: 70%;
   background-color: white;
-  
+  text-align: center;
+
   padding-top: 20px;
   overflow: hidden;
 
@@ -107,7 +125,7 @@ body {
 <body>
     <div class="header">
         <button class="openbtn" onclick="openNav()">☰</button>  
-        <h1>Resources for Change</h1>
+        <a style="font-weight:bold" href="index.html" class="center">Resources for Change</a>
         <a href="#">about</a>
     </div>
 
